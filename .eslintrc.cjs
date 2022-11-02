@@ -26,5 +26,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'no-trailing-spaces': 0,
     'no-multiple-empty-lines': 'off',
+    'object-curly-newline': 0,
+    'linebreak-style': 0,
   },
 };
