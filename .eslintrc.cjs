@@ -28,5 +28,6 @@ module.exports = {
     'no-multiple-empty-lines': 'off',
     'object-curly-newline': 0,
     'linebreak-style': 0,
+    'padded-blocks': 0,
   },
 };

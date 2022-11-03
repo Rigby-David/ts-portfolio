@@ -1,19 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;800&family=Smokum&display=swap');
+
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Smokum', cursive; */
+
 body,
 html,
 #root {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   --color1: rgb(235, 227, 220);
   --color2: rgb(239, 215, 196);
+  --color3: rgb(147, 141, 138);
 }
 
+#root {
+background-color: var(--color2);
+}
+
+body {
+  margin: 0;
+}
 /* header */
 .header {
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  /* border-bottom: 2px solid var(--color3); */
+  font-size: 20px;
 }
+
+.expanded-header {
+  visibility: hidden;
+}
+
 /* home-page */
 .home-page {
-  background-color: var(--color2);
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+}
+
+.home-page-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--color1);
 }
 
 /* projects-page */
