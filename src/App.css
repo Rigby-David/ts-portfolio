@@ -11,24 +11,55 @@ html,
   --color1: rgb(235, 227, 220);
   --color2: rgb(239, 215, 196);
   --color3: rgb(147, 141, 138);
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #root {
 background-color: var(--color2);
 }
 
+/* Styles regardless of view width */
+
+main {
+  background-color: var(--color2);
+}
+
+
 body {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:focus, a:hover {
+  color: var(--color3);
+  text-decoration: underline;
+}
+
 /* header */
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 3em;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 20px;
-  /* border-bottom: 2px solid var(--color3); */
   font-size: 20px;
 }
 
@@ -37,11 +68,13 @@ body {
 }
 
 /* home-page */
+
 .home-page {
   display: flex;
   justify-content: center;
   font-family: 'Nunito', sans-serif;
   font-weight: 500;
+  background-color: var(--color1);
 }
 
 .home-page-text {
@@ -49,10 +82,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px;
-  width: 200px;
-  height: 200px;
-  background-color: var(--color1);
+  background-color: var(--color2);
+}
+
+.home-page-tech-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color2);
 }
 
 /* projects-page */
@@ -60,3 +98,80 @@ body {
 /* about-page */
 
 /* contact-page */
+
+/* @media screen and (max-width: 600px) {
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.home-page-text {
+  padding: 70px;
+  width: 200px;
+  height: 200px;
+}
+
+.header {
+  gap: 5vw;
+}
+
+}; */
+
+@media screen and (min-width: 600px) {
+/* desktop styles */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  gap: 13vw;
+  margin-right: 3em;
+}
+
+.home-page-img {
+  margin-top: 3em;
+  margin-right: 2em;
+}
+
+img {
+  width: 15em;
+  height: 30em;
+  border-radius: 5em;
+  border: .02em solid var(--color3);
+}
+
+.home-page {
+  height: 90vh;
+  width: 100%;
+  margin: 1.5em 1.5em 0 1.5em;
+  border: .02em solid var(--color3);
+  border-radius: 1em;
+}
+
+.home-page-text {
+  margin-top: 3em;
+  width: 50em;
+  height: 20em;
+  border: .02em solid var(--color3);
+  border-radius: 1em;
+  /* margin-right: 2em; */
+}
+
+.home-page-tech-stack {
+  margin-top: 3em;
+  width: 50em;
+  height: 20em;
+  border: .02em solid var(--color3);
+  border-radius: 1em;
+  margin-bottom: 3em;
+}
+
+};
